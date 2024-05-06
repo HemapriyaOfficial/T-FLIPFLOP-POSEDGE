@@ -78,4 +78,5 @@ endmodule
 ![325863177-793e802c-8be8-410d-89fc-15447ab4acd1](https://github.com/HemapriyaOfficial/T-FLIPFLOP-POSEDGE/assets/147114275/66f66994-1d16-4b2e-8f1d-95539633e8e0)
 
 **RESULTS**
+
 T flipflop using verilog and validating their functionality using their functional tables completed
