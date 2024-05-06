@@ -27,7 +27,7 @@ Here, Qtt & Qt+1t+1 are present state & next state respectively. So, T flip-flop
 From the above characteristic table, we can directly write the next state equation as Q(t+1)=T′Q(t)+TQ(t)′ ⇒Q(t+1)=T⊕Q(t)
 
 **Procedure**
-```
+
 Define Module: Define a Verilog module for the T flip-flop with inputs (T, CLK) and outputs (Q, Q_bar).
 
 Declare Inputs and Outputs: Declare input and output ports for the module.
@@ -41,34 +41,41 @@ Apply Input Stimuli: In the testbench, apply various combinations of input stimu
 Verify Output Behavior: Verify that the output behavior of the T flip-flop matches the expected behavior defined by its functional table.
 
 Check for Race Conditions: Ensure that there are no race conditions or undefined states in the design by analyzing the timing and sequence of input changes.
-```
+
 
 
 **PROGRAM**
 
 Developed by:Hemapriya K  RegisterNumber:212223040066
 ```
-module Exp_09( input clk, rst_n, input t,
+module T_FLIPFLOP( input clk, rst_n, input t,
 output reg q,
 output q_bar
 );
 always@(posedge clk) 
 begin 
-	if(!rst_n)
-		q <= 0;
-		else
-			if(t)
-				q <= ~q;
-			else
-				q <= q;
-end
+if(!rst_n)
+ q<=0;
+ else
+ if(t)
+ q<=~q;
+ else
+ q<=q;
+ end
+ 
 assign q_bar = ~q;
 endmodule
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+
+![325863122-e46e1a65-ea21-4034-a41f-11b20a7fc1d3](https://github.com/HemapriyaOfficial/T-FLIPFLOP-POSEDGE/assets/147114275/adfd3330-58d3-4cc6-be74-518d36b486d8)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
+
+
+![325863177-793e802c-8be8-410d-89fc-15447ab4acd1](https://github.com/HemapriyaOfficial/T-FLIPFLOP-POSEDGE/assets/147114275/66f66994-1d16-4b2e-8f1d-95539633e8e0)
 
 **RESULTS**
 T flipflop using verilog and validating their functionality using their functional tables completed
