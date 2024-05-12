@@ -47,7 +47,7 @@ Check for Race Conditions: Ensure that there are no race conditions or undefined
 **PROGRAM**
 
 Developed by:Hemapriya K  RegisterNumber:212223040066
-```
+
 module T_FLIPFLOP( input clk, rst_n, input t,
 output reg q,
 output q_bar
@@ -65,7 +65,7 @@ if(!rst_n)
  
 assign q_bar = ~q;
 endmodule
-```
+
 
 **RTL LOGIC FOR FLIPFLOPS**
 
